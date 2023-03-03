@@ -1,5 +1,6 @@
-#
-#
+# James Groseclose
+# CIS 216
+# Course Project Phase 4
 #
 from datetime import datetime
 ################################################################################
