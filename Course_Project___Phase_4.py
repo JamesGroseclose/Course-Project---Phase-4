@@ -69,6 +69,7 @@ def Login():
     UserRole = "None"
     while True:
        ########## Write the line of code that will read a line from UserFile and assign it to UserDetail
+
              
        if not UserDetail:
            return UserRole, UserName
