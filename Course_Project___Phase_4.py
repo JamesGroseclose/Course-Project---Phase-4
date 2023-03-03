@@ -63,7 +63,7 @@ def printuserinfo():
 def Login():
         # read login information and store in a list
     ########## Write the line of code that will open the file Users.txt in read mode
-    with open(FILENAME, "r") as Users.txt:
+    UserFile = open("Users.txt","r")
         
     UserName = input("Enter User Name: ")
     UserRole = "None"
@@ -73,9 +73,12 @@ def Login():
        if not UserDetail:
            return UserRole, UserName
        ########## Write the line of code that will replace the carriage return in UserDetail
-       
+       UserDetail = UserDetail.replace("\n", "")
+              
        ########## Write the line of code that will split UserDetail on the pipe delimiter (|) and assign it to UserList
-                  
+       UserDetail = UserName + "|" + pwd + "|" + UserRole + "\n"
+       
+
        if UserName == UserList[0]:
             UserRole = UserList[2]  # user is valid, return role
             return UserRole, UserName
