@@ -7,7 +7,7 @@ from datetime import datetime
 def CreateUsers():
     print('##### Create users, passwords, and roles #####')
     ########## Open the file user.txt in append mode and assign to UserFile
-    UserFile = open("user.txt","a")
+    UserFile = ("user.txt" , "a")
          
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
@@ -49,7 +49,7 @@ def GetUserRole():
      userrole = input("Enter role (Admin or User): ")
      while True:
          ####### write the if statement that validates that Admin or User has been entered. If true, return userrole.  If false, re-input userrole
-         if (UserList.lower[2] == "admin" or "user"):
+         if (userrole.lower == "admin" or "user"):
              return userrole
 
          else:
