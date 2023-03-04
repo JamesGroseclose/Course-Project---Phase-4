@@ -7,16 +7,22 @@ from datetime import datetime
 def CreateUsers():
     print('##### Create users, passwords, and roles #####')
     ########## Open the file user.txt in append mode and assign to UserFile
-    with open(FILENAME, "a") as UserFile:
-     
+    UserFile = open("user.txt","a")
+         
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
-        
+        username = GetUserName()
+
+
         if (username.upper() == "END"):
             break
         ########## Write the line of code that will call function GetUserPassword and assign the return value to userpwd
+        userpwd = GetUserPassword()
+
         
         ########## Write the line of code that will call function GetUserRole() and assign the return value to userrole
+        userrole = GetUserRole()
+
         
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"  
         UserFile.write(UserDetail)
@@ -43,6 +49,11 @@ def GetUserRole():
      userrole = input("Enter role (Admin or User): ")
      while True:
          ####### write the if statement that validates that Admin or User has been entered. If true, return userrole.  If false, re-input userrole
+         if (UserList.lower[2] == "admin" or "user"):
+             return userrole
+
+         else:
+            userrole = input("Enter role (Admin or User): ")
 
 
 def printuserinfo():
@@ -172,7 +183,8 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
-    
+    CreateUsers()
+
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
@@ -180,12 +192,12 @@ if __name__ == "__main__":
     DetailsPrinted = False  ###
     EmpTotals = {} ###
     ########## Write the if statement that will check to see if UserRole is equal to NONE (NOTE: code will show red error lines until this line is written)
-    
+    if UserRole.lower() != "admin" or UserRole.lower() != "user":
         print(UserName," is invalid.")
     else:
     # only admin users can enter data
         ##### write the if statement that will check to see if the UserRole is equal to ADMIN (NOTE: code will show red error lines until this line is written)
-        
+        if UserRole.lower() == "admin":
    
             EmpFile = open("Employees.txt", "a+")                
             while True:
@@ -198,7 +210,7 @@ if __name__ == "__main__":
                 taxrate = GetTaxRate()
                 EmpDetail = fromdate + "|" + todate  + "|" + empname  + "|" + str(hours)  + "|" + str(hourlyrate)  + "|" + str(taxrate) + "\n"  
                 EmpFile.write(EmpDetail)
-        # close file to save data
+        else:   # close file to save data
             EmpFile.close()    
-        printinfo(DetailsPrinted)
+            printinfo(DetailsPrinted)
 
