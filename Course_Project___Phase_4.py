@@ -80,7 +80,7 @@ def Login():
     UserRole = "None"
     while True:
        ########## Write the line of code that will read a line from UserFile and assign it to UserDetail
-
+       UserDetail = UserFile.readline()
              
        if not UserDetail:
            return UserRole, UserName
@@ -188,6 +188,7 @@ if __name__ == "__main__":
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
+
      
     DetailsPrinted = False  ###
     EmpTotals = {} ###
