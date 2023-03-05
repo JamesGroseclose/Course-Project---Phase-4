@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Course Project - Phase 4</Name>
     <RootNamespace>Course Project - Phase 4</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
