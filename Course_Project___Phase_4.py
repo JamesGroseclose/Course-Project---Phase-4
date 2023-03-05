@@ -12,10 +12,10 @@ def CreateUsers():
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
         username = GetUserName()
+        return username
 
-
-        if (username.upper() == "END"):
-            break
+       
+        
         ########## Write the line of code that will call function GetUserPassword and assign the return value to userpwd
         userpwd = GetUserPassword()
 
@@ -35,8 +35,13 @@ def CreateUsers():
 
 def GetUserName():
     ##### write the code to enter the username or End and return username 
-    username = input ("Enter user name: ")
-    return username
+    while True:
+        username = input ("Enter user name: ")
+
+        if (username.upper() == "END"):
+            break
+
+        return username
   
 
 def GetUserPassword():
