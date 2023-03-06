@@ -2,3 +2,9 @@ Bob|bob9|Admin
 Fred|fred8|User
 Tim|tim7|admin
 Kim|kim8|user
+Juan|juan8|admin
+Steven|steven1|user
+Laural|laural2|admin
+Tony|tony6|user
+Alex|alex3|admin
+Dianna|dianna2|user

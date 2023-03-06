@@ -74,7 +74,7 @@ def Login():
        UserDetail = UserDetail.replace("\n", "")
        ########## Write the line of code that will split UserDetail on the pipe delimiter (|) and assign it to UserList
        UserList = UserDetail.split("|")       
-       print (UserList)   
+          
        if UserName.upper() == UserList[0].upper():
             UserRole = UserList[2]  # user is valid, return role
             return UserRole, UserName
