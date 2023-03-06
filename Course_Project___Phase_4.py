@@ -97,7 +97,7 @@ def Login():
        ########## Write the line of code that will replace the carriage return in UserDetail
        UserDetail = UserDetail.replace("\n", "")
        ########## Write the line of code that will split UserDetail on the pipe delimiter (|) and assign it to UserList
-       UserDetail = UserName + "|" + UserPassword  + "|" + UserRole + "\n"
+       UserDetail = UserName + "|" + "********"  + "|" + UserRole + "\n"
        UserList = UserDetail.split("|")
        print (UserList)   
        if UserName == UserList[0]:
