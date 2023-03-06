@@ -48,9 +48,10 @@ def GetUserRole():
      userrole = input("Enter role (Admin or User): ")
      while True:
          ####### write the if statement that validates that Admin or User has been entered. If true, return userrole.  If false, re-input userrole
-         if (userrole.lower == "admin" or "user"):
-             return userrole
-        
+         if (userrole.upper() == "ADMIN" or userrole.upper() == "USER"):
+             return userrole                     
+         else:
+             userrole = input("Enter role (Admin or User): ")
 
 def printuserinfo():
     UserFile = open("user.txt","r")
@@ -77,11 +78,7 @@ def Login():
     
     while True:
        ########## Write the line of code that will read a line from UserFile and assign it to UserDetail
-       UserDetail = UserFile.readline()
-
-
-
-       
+       UserDetail = UserFile.readline()       
        
        if not UserDetail:
            return UserRole, UserName
@@ -93,7 +90,7 @@ def Login():
        
        
        print (UserList)   
-       if UserName == UserList[0]:
+       if UserName.upper() == UserList[0].upper():
             UserRole = UserList[2]  # user is valid, return role
             return UserRole, UserName
     return UserRole, UserName

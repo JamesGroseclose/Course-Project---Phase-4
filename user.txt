@@ -1,2 +1,4 @@
-Bob|bob8|Admin
-Fred|fred9|User
+Bob|bob9|Admin
+Fred|fred8|User
+Tim|tim7|admin
+Kim|kim8|user
