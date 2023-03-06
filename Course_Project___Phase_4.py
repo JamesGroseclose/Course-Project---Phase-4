@@ -40,9 +40,7 @@ def CreateUsers():
 def GetUserName():
     ##### write the code to enter the username or End and return username 
     while True:
-        username = input ("Enter user name: ")
-    
-        
+        username = input ("Enter user name: ")        
         return username
     
 
@@ -89,16 +87,17 @@ def Login():
 
 
        ###################Marker###############
-       print (UserDetail)
+       print (UserDetail, "first of login")
        
        if not UserDetail:
-           return UserRole, UserName 
+           return UserRole, UserName
            print (UserPassword)
        ########## Write the line of code that will replace the carriage return in UserDetail
        UserDetail = UserDetail.replace("\n", "")
        ########## Write the line of code that will split UserDetail on the pipe delimiter (|) and assign it to UserList
-       UserDetail = UserName + "|" + "********"  + "|" + UserRole + "\n"
        UserList = UserDetail.split("|")
+       
+       
        print (UserList)   
        if UserName == UserList[0]:
             UserRole = UserList[2]  # user is valid, return role

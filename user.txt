@@ -1,2 +1,2 @@
-Bob|Bob4|Admin
-Fred|fred8|User
+Bob|bob8|Admin
+Fred|fred9|User
