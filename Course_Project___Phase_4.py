@@ -11,33 +11,24 @@ def CreateUsers():
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
         username = GetUserName()
-        if (username.upper() == "END"):
-            
-            break
-        
-        
+        if (username.upper() == "END"):            
+            break      
         ########## Write the line of code that will call function GetUserPassword and assign the return value to userpwd
-        userpwd = GetUserPassword()
-        
-
+        userpwd = GetUserPassword()  
         ########## Write the line of code that will call function GetUserRole() and assign the return value to userrole
-        userrole = GetUserRole()
-        
-
+        userrole = GetUserRole() 
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"  
         UserFile.write(UserDetail)
     # close file to save data
     ########## Write the line of code that will close the file UserFile
     UserFile.close()
-    printuserinfo()  
-    
+    printuserinfo() 
 
 def GetUserName():
     ##### write the code to enter the username or End and return username 
     while True:
         username = input ("Enter user name: ")        
-        return username
-    
+        return username   
 
 def GetUserPassword():
     ##### write the code to enter the pwd and return pwd
@@ -65,30 +56,24 @@ def printuserinfo():
         userpassword = UserList[1]
         userrole = UserList[2]
         print("User Name: ", username, " Password: ", userpassword, " Role: ", userrole)
-
 ############################################################################################
-
 def Login():
         # read login information and store in a list
     ########## Write the line of code that will open the file Users.txt in read mode
-    UserFile = open("user.txt", "r")
-    
+    UserFile = open("user.txt", "r")   
     UserName = input("Enter User Name: ")
     UserRole = "None"
     
     while True:
        ########## Write the line of code that will read a line from UserFile and assign it to UserDetail
-       UserDetail = UserFile.readline()       
-       
+       UserDetail = UserFile.readline()        
        if not UserDetail:
            return UserRole, UserName
            print (UserPassword)
        ########## Write the line of code that will replace the carriage return in UserDetail
        UserDetail = UserDetail.replace("\n", "")
        ########## Write the line of code that will split UserDetail on the pipe delimiter (|) and assign it to UserList
-       UserList = UserDetail.split("|")
-       
-       
+       UserList = UserDetail.split("|")       
        print (UserList)   
        if UserName.upper() == UserList[0].upper():
             UserRole = UserList[2]  # user is valid, return role
@@ -174,10 +159,7 @@ def PrintTotals(EmpTotals):
     print(f'Total Hours Worked: {EmpTotals["TotHrs"]:,.2f}')
     print(f'Total Gross Pay: {EmpTotals["TotGrossPay"]:,.2f}')
     print(f'Total Income Tax:  {EmpTotals["TotTax"]:,.2f}')
-    print(f'Total Net Pay: {EmpTotals["TotNetPay"]:,.2f}')
-
-
-   
+    print(f'Total Net Pay: {EmpTotals["TotNetPay"]:,.2f}')   
 
 if __name__ == "__main__":
     ##################################################
@@ -186,10 +168,7 @@ if __name__ == "__main__":
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
-    UserRole, UserName = Login()
-    
-    
-    
+    UserRole, UserName = Login()    
     DetailsPrinted = False  ###
     EmpTotals = {} ###
     ########## Write the if statement that will check to see if UserRole is equal to NONE (NOTE: code will show red error lines until this line is written)
