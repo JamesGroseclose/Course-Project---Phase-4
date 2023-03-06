@@ -12,22 +12,17 @@ def CreateUsers():
         ########## Write the line of code that will call function GetUserName and assign the return value to username
         username = GetUserName()
         if (username.upper() == "END"):
-            ###################Marker###############
-            print("step 1.2 exit")
+            
             break
-        ###################Marker###############
-        print("step1")
-       
+        
         
         ########## Write the line of code that will call function GetUserPassword and assign the return value to userpwd
         userpwd = GetUserPassword()
-        ###################Marker###############
-        print("step2")
+        
 
         ########## Write the line of code that will call function GetUserRole() and assign the return value to userrole
         userrole = GetUserRole()
-        ###################Marker###############
-        print("step3")
+        
 
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"  
         UserFile.write(UserDetail)
@@ -86,8 +81,7 @@ def Login():
 
 
 
-       ###################Marker###############
-       print (UserDetail, "first of login")
+       
        
        if not UserDetail:
            return UserRole, UserName
@@ -196,8 +190,7 @@ if __name__ == "__main__":
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
     UserRole, UserName = Login()
-    ###################Marker###############
-    print (UserRole)
+    
     
     
     DetailsPrinted = False  ###
